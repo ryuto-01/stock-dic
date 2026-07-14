@@ -5,6 +5,7 @@ const termsStatus = document.querySelector("#terms-status");
 const searchForm = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input");
 const categoryFilter = document.querySelector("#category-filter");
+const sortOrder = document.querySelector("#sort-order");
 const resetFiltersButton = document.querySelector("#reset-filters");
 
 let allTerms = [];
@@ -76,7 +77,7 @@ function getFilteredTerms() {
     .filter(Boolean);
   const selectedCategory = categoryFilter.value;
 
-  return allTerms.filter((term) => {
+  const filteredTerms = allTerms.filter((term) => {
     const matchesCategory =
       !selectedCategory || term.category === selectedCategory;
     const searchText = createSearchText(term);
@@ -86,6 +87,42 @@ function getFilteredTerms() {
 
     return matchesCategory && matchesKeywords;
   });
+
+  return sortTerms(filteredTerms, sortOrder.value);
+}
+
+function compareNames(firstTerm, secondTerm) {
+  return firstTerm.name.localeCompare(secondTerm.name, "ja", {
+    numeric: true,
+    sensitivity: "base",
+  });
+}
+
+function sortTerms(terms, order) {
+  const sortedTerms = [...terms];
+
+  if (order === "name-asc") {
+    return sortedTerms.sort(compareNames);
+  }
+
+  if (order === "name-desc") {
+    return sortedTerms.sort((firstTerm, secondTerm) =>
+      compareNames(secondTerm, firstTerm),
+    );
+  }
+
+  if (order === "category") {
+    return sortedTerms.sort((firstTerm, secondTerm) => {
+      const categoryComparison = firstTerm.category.localeCompare(
+        secondTerm.category,
+        "ja",
+      );
+
+      return categoryComparison || compareNames(firstTerm, secondTerm);
+    });
+  }
+
+  return sortedTerms;
 }
 
 function renderTerms(terms) {
@@ -166,10 +203,12 @@ searchForm.addEventListener("submit", (event) => {
 
 searchInput.addEventListener("input", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
+sortOrder.addEventListener("change", applyFilters);
 
 resetFiltersButton.addEventListener("click", () => {
   searchInput.value = "";
   categoryFilter.value = "";
+  sortOrder.value = "default";
   applyFilters();
   searchInput.focus();
 });

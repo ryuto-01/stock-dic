@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="株式投資の基本用語を、5問のミニクイズで楽しく復習できます。"
+    >
+    <title>ミニクイズ｜はじめての株式投資辞典</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/quiz.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="./index.html" aria-label="はじめての株式投資辞典 トップページ">
+          <span class="site-title-mark" aria-hidden="true">株</span>
+          <span>はじめての株式投資辞典</span>
+        </a>
+        <nav class="header-nav" aria-label="メインメニュー">
+          <a href="./index.html">用語一覧</a>
+          <a class="is-current" href="./quiz.html" aria-current="page">ミニクイズ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="quiz-hero">
+        <div class="container quiz-hero-inner">
+          <p class="eyebrow">MINI QUIZ</p>
+          <h1>5問で、投資用語を復習しよう。</h1>
+          <p>
+            毎回ランダムに出題されます。用語に合う説明を4つの選択肢から選んでください。
+          </p>
+        </div>
+      </section>
+
+      <section class="quiz-section" aria-labelledby="quiz-heading">
+        <div class="container quiz-shell">
+          <h2 id="quiz-heading" class="visually-hidden">投資用語ミニクイズ</h2>
+
+          <p id="quiz-load-status" class="terms-status" role="status">
+            クイズを準備しています…
+          </p>
+
+          <section id="quiz-start-panel" class="quiz-card quiz-start-panel" hidden>
+            <p id="quiz-term-count" class="quiz-kicker"></p>
+            <h2>まずは5問、気軽に挑戦</h2>
+            <p>
+              間違えても大丈夫です。結果画面から該当する用語の詳しい説明を確認できます。
+            </p>
+            <ul class="quiz-rules">
+              <li>出題数は5問</li>
+              <li>選択肢は各4つ</li>
+              <li>問題は挑戦するたびに変わります</li>
+            </ul>
+            <button id="start-quiz" class="primary-button" type="button" disabled>
+              クイズを始める
+            </button>
+          </section>
+
+          <section id="quiz-question-panel" class="quiz-card" hidden>
+            <div class="quiz-meta">
+              <span id="quiz-progress-text">第1問／5問</span>
+              <span id="quiz-score">正解 0問</span>
+            </div>
+            <div class="quiz-progress-track" aria-hidden="true">
+              <span id="quiz-progress-bar"></span>
+            </div>
+
+            <div class="quiz-question-header">
+              <span id="quiz-category" class="category-badge"></span>
+              <p>次の用語の意味として正しいものを選んでください。</p>
+              <h2 id="quiz-question"></h2>
+              <p id="quiz-reading" class="reading"></p>
+            </div>
+
+            <div id="quiz-choices" class="quiz-choices"></div>
+            <p id="quiz-feedback" class="quiz-feedback" role="status" hidden></p>
+            <button id="next-question" class="primary-button quiz-next" type="button" hidden>
+              次の問題へ
+            </button>
+          </section>
+
+          <section id="quiz-result-panel" class="quiz-card quiz-result-panel" tabindex="-1" hidden>
+            <p class="quiz-kicker">RESULT</p>
+            <h2>クイズ結果</h2>
+            <p id="quiz-result-score" class="quiz-result-score"></p>
+            <p id="quiz-result-message"></p>
+            <div id="quiz-review" class="quiz-review" hidden>
+              <h3>復習しておきたい用語</h3>
+              <ul id="quiz-review-list"></ul>
+            </div>
+            <div class="quiz-result-actions">
+              <button id="restart-quiz" class="primary-button" type="button">
+                もう一度挑戦
+              </button>
+              <a class="secondary-button" href="./index.html">用語一覧へ戻る</a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><small>&copy; 2026 はじめての株式投資辞典</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
