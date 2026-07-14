@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="株式投資の用語を、具体例や注意点とともに初心者向けに解説します。"
+    >
+    <title>用語詳細｜はじめての株式投資辞典</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/detail.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="./index.html" aria-label="はじめての株式投資辞典 トップページ">
+          <span class="site-title-mark" aria-hidden="true">株</span>
+          <span>はじめての株式投資辞典</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="detail-main">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <a href="./index.html">投資用語一覧</a>
+          <span aria-hidden="true">／</span>
+          <span id="breadcrumb-current">用語詳細</span>
+        </nav>
+
+        <p id="detail-status" class="terms-status detail-status" role="status">
+          用語を読み込んでいます…
+        </p>
+
+        <article id="term-detail" class="term-detail" hidden>
+          <header class="detail-header">
+            <span id="detail-category" class="category-badge"></span>
+            <h1 id="detail-name"></h1>
+            <p id="detail-reading" class="detail-reading"></p>
+            <p id="detail-summary" class="detail-summary"></p>
+          </header>
+
+          <div class="detail-content">
+            <section class="detail-section" aria-labelledby="description-heading">
+              <h2 id="description-heading">意味</h2>
+              <p id="detail-description"></p>
+            </section>
+
+            <section id="formula-section" class="detail-section" aria-labelledby="formula-heading">
+              <h2 id="formula-heading">計算式</h2>
+              <p id="detail-formula" class="formula detail-formula"></p>
+            </section>
+
+            <section class="detail-section" aria-labelledby="example-heading">
+              <h2 id="example-heading">具体例</h2>
+              <p id="detail-example"></p>
+            </section>
+
+            <section class="detail-section caution-section" aria-labelledby="caution-heading">
+              <h2 id="caution-heading">初心者が注意したいこと</h2>
+              <p id="detail-caution"></p>
+            </section>
+          </div>
+        </article>
+
+        <section id="related-section" class="related-section" aria-labelledby="related-heading" hidden>
+          <div class="related-heading-row">
+            <div>
+              <p class="section-label">RELATED TERMS</p>
+              <h2 id="related-heading">関連用語</h2>
+            </div>
+          </div>
+          <div id="related-terms" class="related-grid"></div>
+        </section>
+
+        <a class="back-link" href="./index.html">← 用語一覧へ戻る</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><small>&copy; 2026 はじめての株式投資辞典</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

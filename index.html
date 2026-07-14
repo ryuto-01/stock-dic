@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="株式投資を始めたばかりの人向けに、基本用語をわかりやすく紹介する辞書サイトです。"
+    >
+    <title>はじめての株式投資辞典</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="./index.html" aria-label="はじめての株式投資辞典 トップページ">
+          <span class="site-title-mark" aria-hidden="true">株</span>
+          <span>はじめての株式投資辞典</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow">STOCK MARKET GLOSSARY</p>
+          <h1>株式投資の言葉を、<br>ひとつずつ理解しよう。</h1>
+          <p class="hero-description">
+            決算資料や投資情報でよく見かける用語を、初心者向けに短く整理した辞典です。
+            株の基本から注文方法、企業分析まで、知りたい言葉から学びましょう。
+          </p>
+        </div>
+      </section>
+
+      <section class="terms-section" aria-labelledby="terms-heading">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">BASIC TERMS</p>
+              <h2 id="terms-heading">投資用語一覧</h2>
+            </div>
+            <p class="term-count">
+              <strong id="term-count">—</strong>件を表示
+              <small id="total-count"></small>
+            </p>
+          </div>
+
+          <form id="search-form" class="search-panel" role="search">
+            <div class="form-field search-field">
+              <label for="search-input">キーワード検索</label>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="例：PER、配当、はいとう"
+                autocomplete="off"
+              >
+            </div>
+            <div class="form-field">
+              <label for="category-filter">カテゴリー</label>
+              <select id="category-filter">
+                <option value="">すべてのカテゴリー</option>
+              </select>
+            </div>
+            <button id="reset-filters" class="reset-button" type="button">
+              条件をクリア
+            </button>
+          </form>
+
+          <p id="terms-status" class="terms-status" role="status">
+            用語を読み込んでいます…
+          </p>
+          <div id="term-grid" class="term-grid" aria-busy="true"></div>
+        </div>
+      </section>
+
+      <aside class="notice" aria-labelledby="notice-heading">
+        <div class="container notice-inner">
+          <h2 id="notice-heading">この辞典の使い方</h2>
+          <p>
+            指標は1つだけで判断せず、同業他社との比較や業績の推移とあわせて確認しましょう。
+            このサイトは学習用であり、特定の銘柄の売買を勧めるものではありません。
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><small>&copy; 2026 はじめての株式投資辞典</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
