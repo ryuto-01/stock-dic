@@ -9,6 +9,7 @@
       "title": "株式と市場の基本",
       "description": "最初に、株式とは何か、会社と株主の関係、市場で株価が決まる仕組みを学びます。",
       "outcome": "株式を持つ意味と、上場株式が市場で売買される基本的な流れを説明できるようになります。",
+      "clusterId": "market-orders",
       "termIds": [
         "stock",
         "shareholder",
@@ -27,6 +28,7 @@
       "title": "株の買い方と注文方法",
       "description": "証券口座を準備し、注文を出してから売買が成立するまでの実務的な流れを学びます。",
       "outcome": "現物取引の基本と、成行・指値・逆指値を場面に応じて使い分ける考え方が分かります。",
+      "clusterId": "market-orders",
       "termIds": [
         "securities-company",
         "brokerage-account",
@@ -45,6 +47,7 @@
       "title": "利益・損失・リスク",
       "description": "株式投資で生まれる利益と損失の種類、値動きとの付き合い方、リスクを抑える基本を学びます。",
       "outcome": "期待できる収益と起こり得る損失を区別し、長期・分散・損切りの役割を説明できるようになります。",
+      "clusterId": "risk-allocation",
       "termIds": [
         "capital-gain",
         "income-gain",
@@ -64,6 +67,7 @@
       "title": "決算書と企業業績",
       "description": "会社が公表する決算資料を通じて、売上、利益、資産、負債、現金の流れを読み解きます。",
       "outcome": "決算短信と主要な財務諸表の役割を理解し、企業業績の基本的な確認ポイントが分かります。",
+      "clusterId": "disclosure",
       "termIds": [
         "financial-results",
         "earnings-report",
@@ -83,6 +87,7 @@
       "title": "株価指標と投資判断",
       "description": "企業の利益や純資産と株価を結び付け、代表的な指標を使って投資判断を整理します。",
       "outcome": "PER・PBR・ROEなどの意味を理解し、一つの指標だけで判断しない分析の基本が身につきます。",
+      "clusterId": "valuation",
       "termIds": [
         "eps",
         "bps",

@@ -1,0 +1,843 @@
+{
+  "version": 1,
+  "clusters": [
+    {
+      "id": "market-orders",
+      "order": 1,
+      "title": "株式市場と注文の流れ",
+      "summary": "株式を売買する場所と、注文が約定して出来高や株価に反映されるまでを順番に整理します。",
+      "visualType": "process-flow",
+      "visualTitle": "注文から約定までの流れ",
+      "visualDescription": "板を確認して注文方法を選び、売買が成立するまでの基本的な順序です。",
+      "termIds": [
+        "stock",
+        "shareholder",
+        "stock-exchange",
+        "stock-price",
+        "order-book",
+        "market-order",
+        "limit-order",
+        "execution",
+        "volume"
+      ],
+      "recommendedOrder": [
+        "stock",
+        "shareholder",
+        "stock-exchange",
+        "order-book",
+        "market-order",
+        "limit-order",
+        "execution",
+        "volume",
+        "stock-price"
+      ],
+      "comparisonTermIds": ["market-order", "limit-order", "order-book", "execution"]
+    },
+    {
+      "id": "valuation",
+      "order": 2,
+      "title": "利益と株価指標",
+      "summary": "売上高から当期純利益までの流れと、利益・株価からEPSやPERを考える順序を学びます。",
+      "visualType": "formula-flow",
+      "visualTitle": "利益からPERまでの計算関係",
+      "visualDescription": "会社の利益を1株当たりに直し、株価と比べることで代表的な株価指標につながります。",
+      "termIds": [
+        "sales",
+        "operating-profit",
+        "ordinary-profit",
+        "net-income",
+        "eps",
+        "stock-price",
+        "per",
+        "market-cap"
+      ],
+      "recommendedOrder": [
+        "sales",
+        "operating-profit",
+        "ordinary-profit",
+        "net-income",
+        "eps",
+        "stock-price",
+        "per",
+        "market-cap"
+      ],
+      "comparisonTermIds": ["eps", "per", "market-cap"]
+    },
+    {
+      "id": "financial-safety",
+      "order": 3,
+      "title": "純資産と企業の安全性",
+      "summary": "貸借対照表を起点に、BPS・PBR・ROE・自己資本比率が何を見ているかを整理します。",
+      "visualType": "hierarchy-map",
+      "visualTitle": "貸借対照表から見る指標の関係",
+      "visualDescription": "純資産や利益を1株当たり、または比率に置き換えると、企業を別々の角度から確認できます。",
+      "termIds": [
+        "balance-sheet",
+        "bps",
+        "pbr",
+        "roe",
+        "equity-ratio",
+        "market-cap",
+        "stock-price",
+        "net-income"
+      ],
+      "recommendedOrder": [
+        "balance-sheet",
+        "equity-ratio",
+        "bps",
+        "net-income",
+        "roe",
+        "stock-price",
+        "pbr",
+        "market-cap"
+      ],
+      "comparisonTermIds": ["bps", "pbr", "roe", "equity-ratio"]
+    },
+    {
+      "id": "shareholder-returns",
+      "order": 4,
+      "title": "配当と株主還元",
+      "summary": "配当を受け取るための日程と、配当利回り・配当性向・自社株買いの違いを整理します。",
+      "visualType": "timeline",
+      "visualTitle": "株主の権利が確定するまで",
+      "visualDescription": "権利付き最終日、権利落ち日、権利確定日の順序を確認し、株主還元の種類へつなげます。",
+      "termIds": [
+        "dividend",
+        "dividend-yield",
+        "payout-ratio",
+        "eps",
+        "shareholder-benefit",
+        "record-date",
+        "last-day-with-rights",
+        "ex-rights-date",
+        "share-buyback",
+        "stock-price"
+      ],
+      "recommendedOrder": [
+        "eps",
+        "dividend",
+        "stock-price",
+        "dividend-yield",
+        "payout-ratio",
+        "last-day-with-rights",
+        "ex-rights-date",
+        "record-date",
+        "shareholder-benefit",
+        "share-buyback"
+      ],
+      "comparisonTermIds": ["dividend-yield", "payout-ratio", "shareholder-benefit", "share-buyback"]
+    },
+    {
+      "id": "risk-allocation",
+      "order": 5,
+      "title": "リスクと資産配分",
+      "summary": "リスクとリターンを出発点に、分散投資・資産配分・リバランスの役割を整理します。",
+      "visualType": "cycle-flow",
+      "visualTitle": "ポートフォリオ管理の循環",
+      "visualDescription": "資産配分を決め、ポートフォリオを組み、定期的に見直すという概念上の循環です。",
+      "termIds": [
+        "risk",
+        "return",
+        "volatility",
+        "diversification",
+        "portfolio",
+        "asset-allocation",
+        "rebalancing",
+        "long-term-investing",
+        "stop-loss"
+      ],
+      "recommendedOrder": [
+        "return",
+        "risk",
+        "volatility",
+        "diversification",
+        "asset-allocation",
+        "portfolio",
+        "rebalancing",
+        "long-term-investing",
+        "stop-loss"
+      ],
+      "comparisonTermIds": ["risk", "return", "volatility", "diversification"]
+    },
+    {
+      "id": "disclosure",
+      "order": 6,
+      "title": "決算と企業情報の開示",
+      "summary": "企業が決算や業績予想を公表し、必要に応じて修正情報を開示する流れを学びます。",
+      "visualType": "process-flow",
+      "visualTitle": "企業情報が公開される流れ",
+      "visualDescription": "決算資料、業績予想、修正情報、法定書類がどのような役割を持つかを順番に確認します。",
+      "termIds": [
+        "financial-results",
+        "earnings-report",
+        "earnings-forecast",
+        "quarterly-results",
+        "timely-disclosure",
+        "upward-revision",
+        "downward-revision",
+        "investor-relations",
+        "securities-report"
+      ],
+      "recommendedOrder": [
+        "financial-results",
+        "quarterly-results",
+        "earnings-report",
+        "earnings-forecast",
+        "upward-revision",
+        "downward-revision",
+        "timely-disclosure",
+        "investor-relations",
+        "securities-report"
+      ],
+      "comparisonTermIds": ["earnings-report", "securities-report", "upward-revision", "downward-revision"]
+    },
+    {
+      "id": "accounts-tax",
+      "order": 7,
+      "title": "NISA・口座・税金",
+      "summary": "証券口座の種類と、投資で得る利益に関係する税金の基本的な考え方を整理します。",
+      "visualType": "comparison-flow",
+      "visualTitle": "口座選びから利益の確認まで",
+      "visualDescription": "証券口座を開き、口座区分を選び、利益の種類と税務上の扱いを確認するための学習順です。",
+      "termIds": [
+        "nisa",
+        "brokerage-account",
+        "specified-account",
+        "general-account",
+        "withholding-tax",
+        "profit-loss-offset",
+        "capital-gain",
+        "income-gain"
+      ],
+      "recommendedOrder": [
+        "brokerage-account",
+        "specified-account",
+        "general-account",
+        "nisa",
+        "capital-gain",
+        "income-gain",
+        "withholding-tax",
+        "profit-loss-offset"
+      ],
+      "comparisonTermIds": ["nisa", "specified-account", "general-account", "withholding-tax"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "market-stock-stock-price",
+      "clusterId": "market-orders",
+      "from": "stock",
+      "to": "stock-price",
+      "type": "prerequisite",
+      "labelFrom": "次に価格を理解する",
+      "labelTo": "先に株式を理解する",
+      "description": "株価は株式1株の取引価格なので、まず株式が何を表すかを理解するとつながりが見えます。"
+    },
+    {
+      "id": "market-stock-shareholder",
+      "clusterId": "market-orders",
+      "from": "stock",
+      "to": "shareholder",
+      "type": "part-of",
+      "labelFrom": "保有する人につながる",
+      "labelTo": "株式を保有する",
+      "description": "株式を保有する個人や法人が株主です。"
+    },
+    {
+      "id": "market-exchange-order-book",
+      "clusterId": "market-orders",
+      "from": "stock-exchange",
+      "to": "order-book",
+      "type": "used-with",
+      "labelFrom": "市場の注文状況を見る",
+      "labelTo": "取引所で表示される",
+      "description": "板は取引所に集まる売り注文と買い注文を価格ごとに示します。"
+    },
+    {
+      "id": "market-order-book-market-order",
+      "clusterId": "market-orders",
+      "from": "order-book",
+      "to": "market-order",
+      "type": "used-with",
+      "labelFrom": "注文前に確認する",
+      "labelTo": "板と一緒に確認する",
+      "description": "成行注文では希望価格を指定しないため、板の注文状況も判断材料になります。"
+    },
+    {
+      "id": "market-orders-compare",
+      "clusterId": "market-orders",
+      "from": "market-order",
+      "to": "limit-order",
+      "type": "compare-with",
+      "labelFrom": "価格指定の有無を比べる",
+      "labelTo": "成立しやすさを比べる",
+      "description": "成行注文は価格を指定せず、指値注文は希望価格を指定する点が大きな違いです。"
+    },
+    {
+      "id": "market-market-order-execution",
+      "clusterId": "market-orders",
+      "from": "market-order",
+      "to": "execution",
+      "type": "process",
+      "labelFrom": "条件が合えば約定へ",
+      "labelTo": "注文が成立する",
+      "description": "成行注文も相手方の注文と条件が合うことで約定します。"
+    },
+    {
+      "id": "market-limit-order-execution",
+      "clusterId": "market-orders",
+      "from": "limit-order",
+      "to": "execution",
+      "type": "process",
+      "labelFrom": "指定価格で約定を待つ",
+      "labelTo": "価格条件が合って成立",
+      "description": "指値注文は指定した価格条件を満たす相手方がいると約定します。"
+    },
+    {
+      "id": "market-execution-volume",
+      "clusterId": "market-orders",
+      "from": "execution",
+      "to": "volume",
+      "type": "calculated-from",
+      "labelFrom": "成立株数が積み上がる",
+      "labelTo": "約定から集計する",
+      "description": "成立した売買の株数を一定期間で集計したものが出来高です。"
+    },
+    {
+      "id": "market-execution-stock-price",
+      "clusterId": "market-orders",
+      "from": "execution",
+      "to": "stock-price",
+      "type": "affects",
+      "labelFrom": "成立価格が反映される",
+      "labelTo": "約定価格の影響を受ける",
+      "description": "市場で成立した価格が株価として表示されるため、個々の約定が値動きに影響する可能性があります。"
+    },
+
+    {
+      "id": "valuation-sales-operating",
+      "clusterId": "valuation",
+      "from": "sales",
+      "to": "operating-profit",
+      "type": "process",
+      "labelFrom": "本業の費用を差し引く",
+      "labelTo": "売上高からつながる",
+      "description": "売上高から本業に必要な費用などを差し引くことで営業利益につながります。"
+    },
+    {
+      "id": "valuation-operating-ordinary",
+      "clusterId": "valuation",
+      "from": "operating-profit",
+      "to": "ordinary-profit",
+      "type": "process",
+      "labelFrom": "本業外の損益を加える",
+      "labelTo": "営業利益からつながる",
+      "description": "営業利益に利息など通常発生する本業外の損益を反映したものが経常利益です。"
+    },
+    {
+      "id": "valuation-ordinary-net-income",
+      "clusterId": "valuation",
+      "from": "ordinary-profit",
+      "to": "net-income",
+      "type": "process",
+      "labelFrom": "特別損益や税金を反映",
+      "labelTo": "経常利益からつながる",
+      "description": "経常利益に特別損益や税金などを反映すると最終的な当期純利益につながります。"
+    },
+    {
+      "id": "valuation-net-income-eps",
+      "clusterId": "valuation",
+      "from": "net-income",
+      "to": "eps",
+      "type": "calculated-from",
+      "labelFrom": "1株当たりに直す",
+      "labelTo": "当期純利益を計算に使う",
+      "description": "EPSは当期純利益を発行済株式数で割ることを基本に計算します。"
+    },
+    {
+      "id": "valuation-eps-per",
+      "clusterId": "valuation",
+      "from": "eps",
+      "to": "per",
+      "type": "calculated-from",
+      "labelFrom": "PERの分母に使う",
+      "labelTo": "EPSを計算に使う",
+      "description": "PERは株価をEPSで割って求めるため、EPSが計算の土台になります。"
+    },
+    {
+      "id": "valuation-stock-price-per",
+      "clusterId": "valuation",
+      "from": "stock-price",
+      "to": "per",
+      "type": "calculated-from",
+      "labelFrom": "PERの分子に使う",
+      "labelTo": "株価を計算に使う",
+      "description": "PERは現在の株価が1株当たり利益の何倍かを表します。"
+    },
+    {
+      "id": "valuation-stock-price-market-cap",
+      "clusterId": "valuation",
+      "from": "stock-price",
+      "to": "market-cap",
+      "type": "calculated-from",
+      "labelFrom": "会社全体の価値へ広げる",
+      "labelTo": "株価を計算に使う",
+      "description": "時価総額は株価に発行済株式数を掛けることを基本に計算します。"
+    },
+    {
+      "id": "valuation-per-market-cap",
+      "clusterId": "valuation",
+      "from": "per",
+      "to": "market-cap",
+      "type": "used-with",
+      "labelFrom": "会社規模と一緒に確認",
+      "labelTo": "利益倍率と一緒に確認",
+      "description": "PERと時価総額は見る対象が違うため、企業の利益評価と市場規模を分けて確認できます。"
+    },
+
+    {
+      "id": "safety-balance-sheet-bps",
+      "clusterId": "financial-safety",
+      "from": "balance-sheet",
+      "to": "bps",
+      "type": "calculated-from",
+      "labelFrom": "純資産を1株当たりに直す",
+      "labelTo": "貸借対照表を基にする",
+      "description": "BPSは貸借対照表に示される純資産を1株当たりに置き換えた数値です。"
+    },
+    {
+      "id": "safety-balance-sheet-equity-ratio",
+      "clusterId": "financial-safety",
+      "from": "balance-sheet",
+      "to": "equity-ratio",
+      "type": "calculated-from",
+      "labelFrom": "資本構成を比率にする",
+      "labelTo": "貸借対照表を基にする",
+      "description": "自己資本比率は総資産に占める自己資本の割合を貸借対照表から確認します。"
+    },
+    {
+      "id": "safety-bps-pbr",
+      "clusterId": "financial-safety",
+      "from": "bps",
+      "to": "pbr",
+      "type": "calculated-from",
+      "labelFrom": "PBRの分母に使う",
+      "labelTo": "BPSを計算に使う",
+      "description": "PBRは株価をBPSで割り、株価と1株当たり純資産の関係を見ます。"
+    },
+    {
+      "id": "safety-stock-price-pbr",
+      "clusterId": "financial-safety",
+      "from": "stock-price",
+      "to": "pbr",
+      "type": "calculated-from",
+      "labelFrom": "PBRの分子に使う",
+      "labelTo": "株価を計算に使う",
+      "description": "現在の株価をBPSと比べることでPBRを求めます。"
+    },
+    {
+      "id": "safety-net-income-roe",
+      "clusterId": "financial-safety",
+      "from": "net-income",
+      "to": "roe",
+      "type": "calculated-from",
+      "labelFrom": "利益効率の計算に使う",
+      "labelTo": "当期純利益を使う",
+      "description": "ROEは当期純利益を自己資本と比べ、資本から利益を生む効率を見ます。"
+    },
+    {
+      "id": "safety-balance-sheet-roe",
+      "clusterId": "financial-safety",
+      "from": "balance-sheet",
+      "to": "roe",
+      "type": "calculated-from",
+      "labelFrom": "自己資本を確認する",
+      "labelTo": "自己資本を計算に使う",
+      "description": "ROEの計算では貸借対照表から把握する自己資本が必要です。"
+    },
+    {
+      "id": "safety-pbr-roe",
+      "clusterId": "financial-safety",
+      "from": "pbr",
+      "to": "roe",
+      "type": "compare-with",
+      "labelFrom": "資本効率と比べる",
+      "labelTo": "株価評価と比べる",
+      "description": "PBRは株価と純資産の関係、ROEは利益と自己資本の関係を見るため、役割を分けて確認します。"
+    },
+    {
+      "id": "safety-equity-market-cap",
+      "clusterId": "financial-safety",
+      "from": "equity-ratio",
+      "to": "market-cap",
+      "type": "used-with",
+      "labelFrom": "市場規模と一緒に確認",
+      "labelTo": "財務の安定性と一緒に確認",
+      "description": "自己資本比率と時価総額は異なる観点なので、財務構成と市場評価を分けて確認できます。"
+    },
+
+    {
+      "id": "returns-eps-dividend",
+      "clusterId": "shareholder-returns",
+      "from": "eps",
+      "to": "dividend",
+      "type": "prerequisite",
+      "labelFrom": "利益配分へ進む",
+      "labelTo": "先に1株当たり利益を理解",
+      "description": "1株当たり利益を理解すると、利益のうち配当に回す割合を考えやすくなります。"
+    },
+    {
+      "id": "returns-dividend-yield",
+      "clusterId": "shareholder-returns",
+      "from": "dividend",
+      "to": "dividend-yield",
+      "type": "calculated-from",
+      "labelFrom": "株価に対する割合を見る",
+      "labelTo": "配当金を計算に使う",
+      "description": "配当利回りは年間配当金を株価で割って求めます。"
+    },
+    {
+      "id": "returns-stock-price-yield",
+      "clusterId": "shareholder-returns",
+      "from": "stock-price",
+      "to": "dividend-yield",
+      "type": "calculated-from",
+      "labelFrom": "利回りの分母に使う",
+      "labelTo": "株価を計算に使う",
+      "description": "同じ配当金でも株価が変わると配当利回りは変わります。"
+    },
+    {
+      "id": "returns-eps-payout",
+      "clusterId": "shareholder-returns",
+      "from": "eps",
+      "to": "payout-ratio",
+      "type": "calculated-from",
+      "labelFrom": "利益配分の計算に使う",
+      "labelTo": "EPSを計算に使う",
+      "description": "1株当たり配当金をEPSと比べる方法で配当性向を確認できます。"
+    },
+    {
+      "id": "returns-yield-payout",
+      "clusterId": "shareholder-returns",
+      "from": "dividend-yield",
+      "to": "payout-ratio",
+      "type": "compare-with",
+      "labelFrom": "利益配分と比べる",
+      "labelTo": "株価に対する利回りと比べる",
+      "description": "配当利回りは株価との関係、配当性向は利益との関係を見る点が異なります。"
+    },
+    {
+      "id": "returns-last-day-ex-rights",
+      "clusterId": "shareholder-returns",
+      "from": "last-day-with-rights",
+      "to": "ex-rights-date",
+      "type": "process",
+      "labelFrom": "翌営業日の段階へ",
+      "labelTo": "前日までに権利を確保",
+      "description": "一般に権利付き最終日の次の営業日が権利落ち日です。"
+    },
+    {
+      "id": "returns-ex-rights-record",
+      "clusterId": "shareholder-returns",
+      "from": "ex-rights-date",
+      "to": "record-date",
+      "type": "process",
+      "labelFrom": "権利確定へ進む",
+      "labelTo": "権利落ち日を経る",
+      "description": "権利落ち日を経て、権利確定日時点の株主名簿を基に権利が確定します。"
+    },
+    {
+      "id": "returns-record-benefit",
+      "clusterId": "shareholder-returns",
+      "from": "record-date",
+      "to": "shareholder-benefit",
+      "type": "process",
+      "labelFrom": "優待の権利判定へ",
+      "labelTo": "権利確定日を確認する",
+      "description": "株主優待の対象条件には権利確定日や保有株数などが関係します。"
+    },
+    {
+      "id": "returns-dividend-buyback",
+      "clusterId": "shareholder-returns",
+      "from": "dividend",
+      "to": "share-buyback",
+      "type": "compare-with",
+      "labelFrom": "自社株買いと比べる",
+      "labelTo": "配当と比べる",
+      "description": "配当は株主へ現金を還元し、自社株買いは市場の株式を会社が取得する点が異なります。"
+    },
+    {
+      "id": "returns-benefit-buyback",
+      "clusterId": "shareholder-returns",
+      "from": "shareholder-benefit",
+      "to": "share-buyback",
+      "type": "related",
+      "labelFrom": "別の株主還元も確認",
+      "labelTo": "優待制度も確認",
+      "description": "どちらも株主との関係で語られますが、目的や仕組みは異なります。"
+    },
+
+    {
+      "id": "risk-return-compare",
+      "clusterId": "risk-allocation",
+      "from": "risk",
+      "to": "return",
+      "type": "compare-with",
+      "labelFrom": "期待収益と比べる",
+      "labelTo": "不確実性と比べる",
+      "description": "リターンだけでなく、その結果がどれほど振れ得るかというリスクも一緒に考えます。"
+    },
+    {
+      "id": "risk-volatility-risk",
+      "clusterId": "risk-allocation",
+      "from": "volatility",
+      "to": "risk",
+      "type": "affects",
+      "labelFrom": "値動きの大きさを示す",
+      "labelTo": "値動きを判断材料にする",
+      "description": "ボラティリティが大きいことは価格変動リスクを考える材料になりますが、リスクのすべてを表すわけではありません。"
+    },
+    {
+      "id": "risk-diversification-risk",
+      "clusterId": "risk-allocation",
+      "from": "diversification",
+      "to": "risk",
+      "type": "affects",
+      "labelFrom": "偏りを抑える考え方",
+      "labelTo": "分散で影響を抑える可能性",
+      "description": "投資先を分けることで特定資産の影響を抑えられる可能性がありますが、損失をなくすものではありません。"
+    },
+    {
+      "id": "risk-allocation-portfolio",
+      "clusterId": "risk-allocation",
+      "from": "asset-allocation",
+      "to": "portfolio",
+      "type": "part-of",
+      "labelFrom": "具体的な組み合わせへ",
+      "labelTo": "資産配分を含む",
+      "description": "資産配分の方針を、実際の保有資産の組み合わせで表したものがポートフォリオです。"
+    },
+    {
+      "id": "risk-portfolio-rebalancing",
+      "clusterId": "risk-allocation",
+      "from": "portfolio",
+      "to": "rebalancing",
+      "type": "process",
+      "labelFrom": "配分のずれを見直す",
+      "labelTo": "ポートフォリオを調整",
+      "description": "値動きで資産配分が変わったとき、目標に近づける調整がリバランスです。"
+    },
+    {
+      "id": "risk-rebalancing-allocation",
+      "clusterId": "risk-allocation",
+      "from": "rebalancing",
+      "to": "asset-allocation",
+      "type": "process",
+      "labelFrom": "目標配分へ戻す",
+      "labelTo": "定期的に見直す",
+      "description": "リバランスでは、あらかじめ決めた資産配分を基準に調整します。"
+    },
+    {
+      "id": "risk-diversification-long-term",
+      "clusterId": "risk-allocation",
+      "from": "diversification",
+      "to": "long-term-investing",
+      "type": "used-with",
+      "labelFrom": "長期の考え方と組み合わせる",
+      "labelTo": "投資先も分けて考える",
+      "description": "長期投資と分散投資は別の考え方ですが、投資計画で一緒に検討されることがあります。"
+    },
+    {
+      "id": "risk-volatility-stop-loss",
+      "clusterId": "risk-allocation",
+      "from": "volatility",
+      "to": "stop-loss",
+      "type": "used-with",
+      "labelFrom": "損失管理と一緒に確認",
+      "labelTo": "値動きの大きさを確認",
+      "description": "値動きの大きさを理解したうえで、損失を確定する条件を事前に考える方法があります。"
+    },
+
+    {
+      "id": "disclosure-results-report",
+      "clusterId": "disclosure",
+      "from": "financial-results",
+      "to": "earnings-report",
+      "type": "prerequisite",
+      "labelFrom": "開示資料へ進む",
+      "labelTo": "先に決算を理解する",
+      "description": "決算の意味を理解すると、その内容を早く伝える決算短信の役割が分かりやすくなります。"
+    },
+    {
+      "id": "disclosure-quarterly-results",
+      "clusterId": "disclosure",
+      "from": "quarterly-results",
+      "to": "financial-results",
+      "type": "part-of",
+      "labelFrom": "決算の一つ",
+      "labelTo": "四半期ごとの決算を含む",
+      "description": "四半期決算は決算を3か月ごとの期間で区切って確認するものです。"
+    },
+    {
+      "id": "disclosure-report-forecast",
+      "clusterId": "disclosure",
+      "from": "earnings-report",
+      "to": "earnings-forecast",
+      "type": "used-with",
+      "labelFrom": "今後の見通しも確認",
+      "labelTo": "実績と一緒に確認",
+      "description": "決算短信では実績だけでなく業績予想も重要な確認項目です。"
+    },
+    {
+      "id": "disclosure-forecast-upward",
+      "clusterId": "disclosure",
+      "from": "earnings-forecast",
+      "to": "upward-revision",
+      "type": "process",
+      "labelFrom": "予想を上へ見直す",
+      "labelTo": "以前の予想から修正",
+      "description": "業績予想を従来より高い数値へ見直すことが上方修正です。"
+    },
+    {
+      "id": "disclosure-forecast-downward",
+      "clusterId": "disclosure",
+      "from": "earnings-forecast",
+      "to": "downward-revision",
+      "type": "process",
+      "labelFrom": "予想を下へ見直す",
+      "labelTo": "以前の予想から修正",
+      "description": "業績予想を従来より低い数値へ見直すことが下方修正です。"
+    },
+    {
+      "id": "disclosure-revisions-compare",
+      "clusterId": "disclosure",
+      "from": "upward-revision",
+      "to": "downward-revision",
+      "type": "compare-with",
+      "labelFrom": "下方修正と比べる",
+      "labelTo": "上方修正と比べる",
+      "description": "どちらも以前の業績予想を見直す開示ですが、修正する方向が異なります。"
+    },
+    {
+      "id": "disclosure-upward-timely",
+      "clusterId": "disclosure",
+      "from": "upward-revision",
+      "to": "timely-disclosure",
+      "type": "process",
+      "labelFrom": "適時に知らせる",
+      "labelTo": "修正情報を開示する",
+      "description": "重要な業績予想の修正は適時開示として公表されます。"
+    },
+    {
+      "id": "disclosure-downward-timely",
+      "clusterId": "disclosure",
+      "from": "downward-revision",
+      "to": "timely-disclosure",
+      "type": "process",
+      "labelFrom": "適時に知らせる",
+      "labelTo": "修正情報を開示する",
+      "description": "重要な業績予想の修正は適時開示として公表されます。"
+    },
+    {
+      "id": "disclosure-report-securities",
+      "clusterId": "disclosure",
+      "from": "earnings-report",
+      "to": "securities-report",
+      "type": "compare-with",
+      "labelFrom": "法定書類と比べる",
+      "labelTo": "速報資料と比べる",
+      "description": "決算短信は速報性を重視した資料、有価証券報告書は法令に基づく詳細な書類という違いがあります。"
+    },
+    {
+      "id": "disclosure-ir-timely",
+      "clusterId": "disclosure",
+      "from": "investor-relations",
+      "to": "timely-disclosure",
+      "type": "used-with",
+      "labelFrom": "重要開示も確認",
+      "labelTo": "IR情報と一緒に確認",
+      "description": "IRには幅広い投資家向け情報が含まれ、適時開示はその中でも重要な情報源です。"
+    },
+
+    {
+      "id": "accounts-brokerage-specified",
+      "clusterId": "accounts-tax",
+      "from": "brokerage-account",
+      "to": "specified-account",
+      "type": "part-of",
+      "labelFrom": "口座区分を選ぶ",
+      "labelTo": "証券口座の区分",
+      "description": "特定口座は証券口座で選べる課税口座の区分の一つです。"
+    },
+    {
+      "id": "accounts-brokerage-general",
+      "clusterId": "accounts-tax",
+      "from": "brokerage-account",
+      "to": "general-account",
+      "type": "part-of",
+      "labelFrom": "口座区分を選ぶ",
+      "labelTo": "証券口座の区分",
+      "description": "一般口座も証券口座で選べる課税口座の区分の一つです。"
+    },
+    {
+      "id": "accounts-specified-general",
+      "clusterId": "accounts-tax",
+      "from": "specified-account",
+      "to": "general-account",
+      "type": "compare-with",
+      "labelFrom": "計算方法を比べる",
+      "labelTo": "特定口座と比べる",
+      "description": "年間取引報告書の作成などに違いがあるため、口座開設時に制度を確認する必要があります。"
+    },
+    {
+      "id": "accounts-nisa-specified",
+      "clusterId": "accounts-tax",
+      "from": "nisa",
+      "to": "specified-account",
+      "type": "compare-with",
+      "labelFrom": "課税口座と比べる",
+      "labelTo": "非課税制度と比べる",
+      "description": "NISAと課税口座では利益や損失の扱いが異なります。制度の最新条件を確認してください。"
+    },
+    {
+      "id": "accounts-capital-withholding",
+      "clusterId": "accounts-tax",
+      "from": "capital-gain",
+      "to": "withholding-tax",
+      "type": "affects",
+      "labelFrom": "税金の扱いを確認",
+      "labelTo": "売却益に関係する場合",
+      "description": "売却益には課税や源泉徴収が関係する場合があります。口座区分と最新制度を確認してください。"
+    },
+    {
+      "id": "accounts-income-withholding",
+      "clusterId": "accounts-tax",
+      "from": "income-gain",
+      "to": "withholding-tax",
+      "type": "affects",
+      "labelFrom": "税金の扱いを確認",
+      "labelTo": "配当などに関係する場合",
+      "description": "配当などの収益では源泉徴収が行われる場合があります。最新制度を確認してください。"
+    },
+    {
+      "id": "accounts-capital-offset",
+      "clusterId": "accounts-tax",
+      "from": "capital-gain",
+      "to": "profit-loss-offset",
+      "type": "used-with",
+      "labelFrom": "損失との相殺を確認",
+      "labelTo": "売却損益と一緒に確認",
+      "description": "一定の利益と損失を相殺できる場合がありますが、対象や手続きは最新制度を確認してください。"
+    },
+    {
+      "id": "accounts-nisa-offset",
+      "clusterId": "accounts-tax",
+      "from": "nisa",
+      "to": "profit-loss-offset",
+      "type": "compare-with",
+      "labelFrom": "損益通算の扱いを比べる",
+      "labelTo": "NISAの損失との違い",
+      "description": "NISA口座の損失は課税口座と扱いが異なります。制度の最新条件を確認してください。"
+    }
+  ]
+}

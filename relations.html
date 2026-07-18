@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="株式投資の用語同士の関係を、フロー・比較表・関係マップで学べる初心者向けページです。"
+    >
+    <title>株式用語つながりマップ｜はじめての株式投資辞典</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/relations.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="./index.html" aria-label="はじめての株式投資辞典 トップページ">
+          <span class="site-title-mark" aria-hidden="true">株</span>
+          <span>はじめての株式投資辞典</span>
+        </a>
+        <nav class="header-nav" aria-label="メインメニュー">
+          <a href="./index.html">用語一覧</a>
+          <a href="./learn.html">学習ロードマップ</a>
+          <a class="is-current" href="./relations.html" aria-current="page">用語マップ</a>
+          <a href="./quiz.html">ミニクイズ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="relations-hero">
+        <div class="container relations-hero-inner">
+          <p class="eyebrow">TERM CONNECTION MAP</p>
+          <h1>株式用語つながりマップ</h1>
+          <p>
+            用語を一つずつ覚えるだけでなく、「何を先に知るか」「何と比べるか」まで
+            つなげて学ぶためのページです。
+          </p>
+        </div>
+      </section>
+
+      <section class="relations-section" aria-labelledby="relations-page-heading">
+        <div class="container">
+          <h2 id="relations-page-heading" class="visually-hidden">株式用語の関係を学ぶ</h2>
+
+          <noscript>
+            <div class="relations-error">
+              <h2>用語マップを表示するにはJavaScriptが必要です</h2>
+              <p>用語の意味は、JavaScriptを使わなくても用語一覧から確認できます。</p>
+              <a class="primary-button" href="./index.html">用語一覧へ戻る</a>
+            </div>
+          </noscript>
+
+          <p id="relations-load-status" class="terms-status" role="status">
+            用語同士の関係を読み込んでいます…
+          </p>
+
+          <div id="relations-content" hidden>
+            <section class="cluster-directory" aria-labelledby="cluster-directory-heading">
+              <div class="cluster-directory-heading">
+                <div>
+                  <p class="section-label">7 LEARNING CLUSTERS</p>
+                  <h2 id="cluster-directory-heading">学びたいテーマを選ぶ</h2>
+                </div>
+                <p id="cluster-count"></p>
+              </div>
+              <nav id="cluster-navigation" class="cluster-navigation" aria-label="用語クラスター"></nav>
+              <p id="cluster-parameter-notice" class="cluster-parameter-notice" role="status" hidden></p>
+            </section>
+
+            <article id="cluster-detail" class="cluster-detail" aria-labelledby="cluster-title">
+              <header class="cluster-header">
+                <p id="cluster-number" class="section-label"></p>
+                <h2 id="cluster-title"></h2>
+                <p id="cluster-summary" class="cluster-summary"></p>
+                <p id="cluster-term-count" class="cluster-term-count"></p>
+              </header>
+
+              <section class="cluster-visual-section" aria-labelledby="cluster-visual-title">
+                <div class="cluster-section-heading">
+                  <div>
+                    <p class="section-label">VISUAL GUIDE</p>
+                    <h3 id="cluster-visual-title"></h3>
+                  </div>
+                  <span id="cluster-visual-type" class="visual-type-label"></span>
+                </div>
+                <p id="cluster-visual-description" class="cluster-visual-description"></p>
+                <div id="cluster-visual" class="cluster-visual" role="group"></div>
+              </section>
+
+              <section class="recommended-order-section" aria-labelledby="recommended-order-heading">
+                <div class="cluster-section-heading">
+                  <div>
+                    <p class="section-label">RECOMMENDED ORDER</p>
+                    <h3 id="recommended-order-heading">初心者向けのおすすめ学習順</h3>
+                  </div>
+                </div>
+                <ol id="recommended-order" class="recommended-order"></ol>
+              </section>
+
+              <section class="relationship-list-section" aria-labelledby="relationship-list-heading">
+                <div class="cluster-section-heading">
+                  <div>
+                    <p class="section-label">WHY THEY CONNECT</p>
+                    <h3 id="relationship-list-heading">用語同士がつながる理由</h3>
+                  </div>
+                </div>
+                <div id="relationship-list" class="relationship-list"></div>
+              </section>
+
+              <section class="comparison-section" aria-labelledby="comparison-heading">
+                <div class="cluster-section-heading">
+                  <div>
+                    <p class="section-label">COMPARE TERMS</p>
+                    <h3 id="comparison-heading">役割を比べて整理する</h3>
+                  </div>
+                </div>
+                <div class="comparison-table-wrap">
+                  <table class="comparison-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">用語名</th>
+                        <th scope="col">何を見るか</th>
+                        <th scope="col">計算式</th>
+                        <th scope="col">初心者が注意したいこと</th>
+                      </tr>
+                    </thead>
+                    <tbody id="comparison-body"></tbody>
+                  </table>
+                </div>
+              </section>
+
+              <aside id="tax-notice" class="tax-notice" aria-labelledby="tax-notice-heading" hidden>
+                <h3 id="tax-notice-heading">税制について</h3>
+                <p>
+                  税制やNISAの条件は変更されることがあります。実際に利用するときは、
+                  金融庁・国税庁・利用する証券会社などで最新条件を確認してください。
+                </p>
+              </aside>
+            </article>
+
+            <aside class="relationship-legend" aria-labelledby="relationship-legend-heading">
+              <div>
+                <p class="section-label">LEGEND</p>
+                <h2 id="relationship-legend-heading">関係ラベルの見方</h2>
+              </div>
+              <ul id="relationship-legend-list"></ul>
+            </aside>
+          </div>
+
+          <section id="relations-error" class="relations-error" aria-labelledby="relations-error-heading" hidden>
+            <h2 id="relations-error-heading">用語マップを表示できませんでした</h2>
+            <p id="relations-error-message"></p>
+            <a class="primary-button" href="./index.html">用語一覧へ戻る</a>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><small>&copy; 2026 はじめての株式投資辞典</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

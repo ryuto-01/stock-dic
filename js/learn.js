@@ -169,6 +169,16 @@ function createChapter(chapter) {
     createElement("p", "", chapter.outcome),
   );
 
+  let clusterLink = null;
+  if (chapter.clusterId) {
+    clusterLink = createElement(
+      "a",
+      "chapter-map-link",
+      "この章に関連する用語マップを見る →",
+    );
+    clusterLink.href = `./relations.html?cluster=${encodeURIComponent(chapter.clusterId)}`;
+  }
+
   const progressTrack = document.createElement("div");
   progressTrack.className = "roadmap-progress-track chapter-progress-track";
   progressTrack.setAttribute("role", "progressbar");
@@ -179,7 +189,11 @@ function createChapter(chapter) {
   const progressBar = document.createElement("span");
   progressTrack.append(progressBar);
 
-  header.append(headingRow, description, outcome, progressTrack);
+  header.append(headingRow, description, outcome);
+  if (clusterLink) {
+    header.append(clusterLink);
+  }
+  header.append(progressTrack);
 
   const termList = document.createElement("ol");
   termList.className = "roadmap-term-list";

@@ -21,6 +21,7 @@
         <nav class="header-nav" aria-label="メインメニュー">
           <a class="is-current" href="./index.html" aria-current="page">用語一覧</a>
           <a href="./learn.html">学習ロードマップ</a>
+          <a href="./relations.html">用語マップ</a>
           <a href="./quiz.html">ミニクイズ</a>
         </nav>
       </div>
@@ -37,6 +38,14 @@
         <p id="detail-status" class="terms-status detail-status" role="status">
           用語を読み込んでいます…
         </p>
+
+        <noscript>
+          <div class="relations-error">
+            <h1>用語詳細を表示するにはJavaScriptが必要です</h1>
+            <p>JavaScriptを有効にするか、用語一覧へ戻ってください。</p>
+            <a class="primary-button" href="./index.html">用語一覧へ戻る</a>
+          </div>
+        </noscript>
 
         <article id="term-detail" class="term-detail" hidden>
           <header class="detail-header">
@@ -72,11 +81,43 @@
         <section id="related-section" class="related-section" aria-labelledby="related-heading" hidden>
           <div class="related-heading-row">
             <div>
-              <p class="section-label">RELATED TERMS</p>
-              <h2 id="related-heading">関連用語</h2>
+              <p class="section-label">UNDERSTAND THE CONNECTIONS</p>
+              <h2 id="related-heading">この用語を、つながりで理解する</h2>
             </div>
+            <a class="secondary-button" href="./relations.html">用語マップ全体を見る</a>
           </div>
-          <div id="related-terms" class="related-grid"></div>
+
+          <p id="related-status" class="related-status" role="status" hidden></p>
+
+          <div id="current-relation-term" class="current-relation-term"></div>
+
+          <section id="learning-path-section" class="learning-path-section" aria-labelledby="learning-path-heading" hidden>
+            <h3 id="learning-path-heading">次にたどる学習ルート</h3>
+            <div class="learning-path-grid">
+              <div id="prerequisite-path" class="learning-path-card" hidden>
+                <h4><span aria-hidden="true">①</span> 先に理解したい用語</h4>
+                <ul></ul>
+              </div>
+              <div id="next-path" class="learning-path-card" hidden>
+                <h4><span aria-hidden="true">→</span> 次に学びたい用語</h4>
+                <ul></ul>
+              </div>
+              <div id="compare-path" class="learning-path-card" hidden>
+                <h4><span aria-hidden="true">⇄</span> 比較すると理解しやすい用語</h4>
+                <ul></ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="typed-related-section" aria-labelledby="typed-related-heading">
+            <h3 id="typed-related-heading">関係タイプ別の関連用語</h3>
+            <div id="related-terms" class="typed-related-groups"></div>
+          </section>
+
+          <section id="related-clusters-section" class="related-clusters-section" aria-labelledby="related-clusters-heading" hidden>
+            <h3 id="related-clusters-heading">この用語が含まれるクラスター</h3>
+            <div id="related-clusters" class="related-clusters"></div>
+          </section>
         </section>
 
         <a class="back-link" href="./index.html">← 用語一覧へ戻る</a>
