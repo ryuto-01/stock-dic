@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="株式投資の基本を5章47語の順番で学べる、初心者向け学習ロードマップです。"
+    >
+    <title>初心者向け学習ロードマップ｜はじめての株式投資辞典</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/learn.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="./index.html" aria-label="はじめての株式投資辞典 トップページ">
+          <span class="site-title-mark" aria-hidden="true">株</span>
+          <span>はじめての株式投資辞典</span>
+        </a>
+        <nav class="header-nav" aria-label="メインメニュー">
+          <a href="./index.html">用語一覧</a>
+          <a class="is-current" href="./learn.html" aria-current="page">学習ロードマップ</a>
+          <a href="./quiz.html">ミニクイズ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="learn-hero">
+        <div class="container learn-hero-inner">
+          <p class="eyebrow">LEARNING ROADMAP</p>
+          <h1>初心者向け学習ロードマップ</h1>
+          <p>
+            「何から学べばよいか」を迷わないように、株式の基礎から投資判断までを
+            5つの章に整理しました。上から順に、自分のペースで進めましょう。
+          </p>
+        </div>
+      </section>
+
+      <section class="learn-section" aria-labelledby="roadmap-heading">
+        <div class="container">
+          <h2 id="roadmap-heading" class="visually-hidden">学習ロードマップの内容</h2>
+
+          <p id="learn-load-status" class="terms-status" role="status">
+            学習ロードマップを読み込んでいます…
+          </p>
+
+          <div id="learn-content" hidden>
+            <section class="roadmap-overview" aria-labelledby="overview-heading">
+              <div class="overview-heading-row">
+                <div>
+                  <p class="section-label">YOUR PROGRESS</p>
+                  <h2 id="overview-heading">学習の全体像</h2>
+                </div>
+                <p id="overall-progress-text" class="overall-progress-text">0／0語（0%）</p>
+              </div>
+
+              <div class="roadmap-stats">
+                <div class="roadmap-stat">
+                  <span>全体の章数</span>
+                  <strong id="chapter-count">—</strong>
+                </div>
+                <div class="roadmap-stat">
+                  <span>対象用語数</span>
+                  <strong id="roadmap-term-count">—</strong>
+                </div>
+                <div class="roadmap-stat">
+                  <span>学習済み</span>
+                  <strong id="completed-term-count">0語</strong>
+                </div>
+              </div>
+
+              <div
+                id="overall-progress"
+                class="roadmap-progress-track overall-progress-track"
+                role="progressbar"
+                aria-label="全体の学習進捗"
+                aria-valuemin="0"
+                aria-valuemax="0"
+                aria-valuenow="0"
+              >
+                <span id="overall-progress-bar"></span>
+              </div>
+
+              <p id="next-term-text" class="next-term-text"></p>
+              <p id="completion-message" class="completion-message" hidden>
+                <span aria-hidden="true">✓</span>
+                全章の学習が完了しました。おつかれさまでした！
+              </p>
+
+              <div class="roadmap-actions">
+                <a id="next-term-link" class="primary-button" href="./index.html">
+                  次の未学習用語から始める
+                </a>
+                <button id="reset-progress" class="secondary-button" type="button" disabled>
+                  全進捗をリセット
+                </button>
+              </div>
+            </section>
+
+            <p id="storage-notice" class="storage-notice" role="status" hidden></p>
+
+            <section class="roadmap-course" aria-labelledby="course-heading">
+              <div class="course-heading-row">
+                <div>
+                  <p class="section-label">5-CHAPTER COURSE</p>
+                  <h2 id="course-heading">基礎から学ぶ5章</h2>
+                </div>
+                <p>各章の用語を、番号順に学習できます。</p>
+              </div>
+              <div id="roadmap-chapters" class="roadmap-chapters"></div>
+            </section>
+          </div>
+
+          <section id="learn-error" class="learn-error" aria-labelledby="learn-error-heading" hidden>
+            <h2 id="learn-error-heading">ロードマップを表示できませんでした</h2>
+            <p id="learn-error-message"></p>
+            <a class="primary-button" href="./index.html">用語一覧へ戻る</a>
+          </section>
+
+          <p
+            id="progress-announcement"
+            class="visually-hidden"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><small>&copy; 2026 はじめての株式投資辞典</small></p>
+      </div>
+    </footer>
+  </body>
+</html>
